@@ -12,7 +12,6 @@ class TestItem < Minitest::Test
     item5 = Item.new(:name => "Guitar", :price => 55)
 
     assert !item1.valid?
-    assert !item1.valid?
     assert item1.errors == ["price must be number"]
 
     assert !item2.valid?

@@ -1,8 +1,10 @@
-require_relative 'errors/validations'
+require_relative 'validations'
 
-class Errors
-  extend Validations
-  include Validations
+module Errors
+  def self.included(base)
+    base.send :include, Validations
+    base.send :extend, Validations
+  end
 
   def valid?
     errors.clear

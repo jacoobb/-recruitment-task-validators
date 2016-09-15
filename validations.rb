@@ -21,4 +21,3 @@ module Validations
     end
   end
 end
-
