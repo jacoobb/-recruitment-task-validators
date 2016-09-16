@@ -1,7 +1,6 @@
 module Validator
   module Validations
     class PresenceValidator < Validator
-
       def valid?(value)
         !empty?(value)
       end
