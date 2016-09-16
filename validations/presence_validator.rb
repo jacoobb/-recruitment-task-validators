@@ -10,7 +10,7 @@ module Validations
     end
 
     def empty?(value)
-      value.nil? || value.length == 0
+      value.nil? || value.size == 0
     end
   end
 end
