@@ -7,7 +7,7 @@ module Validator
       end
 
       def errors_message
-        "#{@attribute.to_s} can't be blank"
+        "#{@attribute} can't be blank"
       end
 
       def empty?(value)
