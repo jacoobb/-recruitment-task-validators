@@ -3,16 +3,8 @@ module Validator
     class Validator
       attr_reader :attribute
 
-      def initialize(attribute: attribute)
+      def initialize(attribute: nil)
         @attribute = attribute
-      end
-
-      def valid?(value)
-        !value.nil?
-      end
-
-      def errors_message
-        "#{@attribute} can't be blank"
       end
     end
   end

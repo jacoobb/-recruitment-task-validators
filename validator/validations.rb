@@ -9,17 +9,15 @@ module Validator
     end
 
     def validates_presence_of(*attributes)
-      validates_list[PresenceValidator] = []
-      attributes.each do |attribute|
-        validates_list[PresenceValidator] << attribute
-      end
+      validates_list[PresenceValidator] ||= []
+      validates_list[PresenceValidator].concat(attributes)
+      validates_list[PresenceValidator].uniq
     end
 
     def validates_numericality_of(*attributes)
-      validates_list[NumericalityValidator] = []
-      attributes.each do |attribute|
-        validates_list[NumericalityValidator] << attribute
-      end
+      validates_list[NumericalityValidator] ||= []
+      validates_list[NumericalityValidator].concat(attributes)
+      validates_list[NumericalityValidator].uniq
     end
   end
 end
